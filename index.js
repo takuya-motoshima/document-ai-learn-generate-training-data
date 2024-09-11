@@ -40,7 +40,7 @@ const generate = async (options, trainRatio = 0.8) => {
       const outputFile = path.join(__dirname, options.output, subdir, outputFileName);
       if (fs.existsSync(outputFile) && fs.statSync(baseFile).mtime <= fs.statSync(outputFile).mtime) {
         // The output file will be overwritten only if the base image is newer than the output file.
-        console.log(`Skip ${outputFile} because it already exists`);
+        console.log(`Skip ${path.relative(__dirname, outputFile)} because it already exists`);
         continue;
       }
       if (backgroundMeta.composite === 'center')
@@ -55,7 +55,7 @@ const generate = async (options, trainRatio = 0.8) => {
           continue;
         await placeOnTransparent(baseFile, backgroundFile, outputFile, backgroundMeta.transparentBoundary);
       }
-      console.log(`Generate ${outputFile}`);
+      console.log(`Generate ${path.relative(__dirname, outputFile)}`);
     }
   }
 }
@@ -140,7 +140,7 @@ for (let outputDir of [
   path.join(__dirname, options.output, 'test'),
 ])
   if (!fs.existsSync(outputDir))
-    fs.mkdirSync(outputDir);
+    fs.mkdirSync(outputDir, {recursive: true});
 
 // Generate images of training data.
 generate(options);
