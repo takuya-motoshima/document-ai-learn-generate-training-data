@@ -1,0 +1,19 @@
+{
+  "name": "document-ai-learn-generate-training-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:windows": "copy package-lock.windows.json package-lock.json && npm install",
+    "install:linux": "cp package-lock.linux.json package-lock.json && npm install"
+  },
+  "keywords": [],
+  "author": "Takuya Motoshima <developer.takuyamotoshima@gmail.com> (https://twitter.com/TakuyaMotoshima)",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "glob": "^11.0.0",
+    "seedrandom": "^3.0.5",
+    "sharp": "^0.33.4"
+  }
+}

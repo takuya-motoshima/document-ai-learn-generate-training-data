@@ -1,0 +1,44 @@
+[
+  {
+    "filename": "0.jpg",
+    "composite": "center"
+  },
+  {
+    "filename": "1.jpg",
+    "composite": "center"
+  },
+  {
+    "filename": "2.jpg",
+    "composite": "center"
+  },
+  {
+    "filename": "3.jpg",
+    "composite": "center"
+  },
+  {
+    "filename": "4.jpg",
+    "composite": "center"
+  },
+  {
+    "filename": "5.png",
+    "composite": "embedded",
+    "orientation": "landscape",
+    "transparentBoundary": {
+      "left": 0.2312,
+      "top": 0.3016,
+      "width": 0.7094,
+      "height": 0.4516
+    }
+  },
+  {
+    "filename": "6.png",
+    "composite": "embedded",
+    "orientation": "portrait",
+    "transparentBoundary": {
+      "left": 0.2297,
+      "top": 0.0000,
+      "width": 0.7109,
+      "height": 1.0000
+    }
+  }
+]
